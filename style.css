@@ -22,63 +22,101 @@ input:focus, button:focus {
   outline: none; }
 
 /* aside menu */
+#sidebar .menu_block nav ul:nth-child(2) li:hover > ul li:hover > ul {
+  display: block; }
+
+#sidebar .menu_block nav ul:nth-child(2) li:hover > ul {
+  display: block !important; }
+
 #sidebar .menu_block {
   float: right;
   width: 250px; }
   #sidebar .menu_block nav {
     background: rgba(0, 45, 47, 0.8); }
-    #sidebar .menu_block nav ul.icon_menu {
+    #sidebar .menu_block nav ul:nth-child(1) {
       margin-bottom: 0px;
       border-bottom: 1px solid #aeaeae; }
-      #sidebar .menu_block nav ul.icon_menu li {
+      #sidebar .menu_block nav ul:nth-child(1) li {
         margin-top: -2px;
         margin-bottom: -3px;
         margin-right: 0px;
         border-right: 1px solid #aeaeae; }
-        #sidebar .menu_block nav ul.icon_menu li:last-child {
+        #sidebar .menu_block nav ul:nth-child(1) li:last-child {
           border-right: 0px; }
-    #sidebar .menu_block nav ul.mane_menu {
+    #sidebar .menu_block nav ul:nth-child(2) {
       margin-bottom: 0px; }
-      #sidebar .menu_block nav ul.mane_menu li {
+      #sidebar .menu_block nav ul:nth-child(2) li {
         margin-left: -15px;
         margin-right: -15px;
+        position: relative;
         border-bottom: 1px solid #aeaeae; }
-        #sidebar .menu_block nav ul.mane_menu li:hover {
+        #sidebar .menu_block nav ul:nth-child(2) li:hover {
           background: #254c6b4d; }
-        #sidebar .menu_block nav ul.mane_menu li a {
-          padding-left: 15px;
-          padding-right: 15px;
-          padding-top: 14px;
-          padding-bottom: 14px;
-          color: #fff;
-          font-size: 15px;
-          display: block; }
-          #sidebar .menu_block nav ul.mane_menu li a:hover {
-            text-decoration: none; }
-  #sidebar .menu_block .contact_block {
-    background: #223e48;
-    padding-top: 13px;
-    padding-bottom: 13px; }
-    #sidebar .menu_block .contact_block li {
-      padding-left: 15px;
-      padding-right: 5px;
-      color: #fff;
-      font-family: verdana;
-      font-size: 12px;
-      margin-bottom: 13px; }
-      #sidebar .menu_block .contact_block li img {
-        padding-right: 15px; }
-  #sidebar .menu_block .social_iocns {
-    margin-top: 15px; }
-    #sidebar .menu_block .social_iocns a {
-      color: #fff;
-      height: 30px;
-      display: flex;
-      align-items: center;
-      font-size: 17px;
-      justify-content: center;
-      width: 30px;
-      background: #1e72bd; }
+          #sidebar .menu_block nav ul:nth-child(2) li:hover:after {
+            display: block; }
+        #sidebar .menu_block nav ul:nth-child(2) li:after {
+          width: 0;
+          height: 0;
+          content: "";
+          position: absolute;
+          right: 0;
+          top: calc(50% - 10px);
+          border-top: 10px solid transparent;
+          border-bottom: 10px solid transparent;
+          border-right-width: 10px;
+          border-right-style: solid;
+          -moz-transform: scale(0.9999);
+          display: none; }
+        #sidebar .menu_block nav ul:nth-child(2) li ul {
+          position: absolute;
+          right: -200px;
+          top: 0px;
+          min-width: 200px;
+          background-color: #1f3443;
+          display: none; }
+          #sidebar .menu_block nav ul:nth-child(2) li ul li {
+            border-bottom: 1px solid #283e4e;
+            margin-left: 0px !important;
+            margin-right: 0px !important;
+            position: relative; }
+            #sidebar .menu_block nav ul:nth-child(2) li ul li ul {
+              display: none; }
+            #sidebar .menu_block nav ul:nth-child(2) li ul li a {
+              color: #fff; }
+      #sidebar .menu_block nav ul:nth-child(2) a {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 14px;
+        padding-bottom: 14px;
+        color: #fff;
+        font-size: 15px;
+        display: block; }
+        #sidebar .menu_block nav ul:nth-child(2) a:hover {
+          text-decoration: none; }
+#sidebar .contact_block {
+  background: #223e48;
+  padding-top: 13px;
+  padding-bottom: 13px; }
+  #sidebar .contact_block li {
+    padding-left: 15px;
+    padding-right: 5px;
+    color: #fff;
+    font-family: verdana;
+    font-size: 12px;
+    margin-bottom: 13px; }
+    #sidebar .contact_block li img {
+      padding-right: 15px; }
+#sidebar .social_iocns {
+  margin-top: 15px; }
+  #sidebar .social_iocns a {
+    color: #fff;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    font-size: 17px;
+    justify-content: center;
+    width: 30px;
+    background: #1e72bd; }
 
 .navbar-btn {
   box-shadow: none;
