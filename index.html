@@ -21,7 +21,6 @@
 </head>
 <body>
 
-
 	<div class="wrapper">
             <!-- Sidebar Holder -->
             <div id="sidebar">
@@ -101,20 +100,150 @@
             </div>
 
             <!-- Page Content Holder -->
-            <div id="content">   
+            <div  id="content">   
 
-            	 <button type="button" id="sidebarCollapse" class="navbar-btn">
+            	 <button  type="button" id="sidebarCollapse" class="navbar-btn">
                                 <span></span>
                                 <span></span>
                                 <span></span>
-                            </button>
-               
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                
+                            </button>  
+                            <form class="search">
+                                <input placeholder="ჩებნა..."  type="text" name=""> <button><i class="fas fa-search"></i></button>
+                            </form>
+                <img style="width: 100%; max-height: 470px;" src="http://www.apicius.es/wp-content/uploads/2012/07/IMG-20120714-009211.jpg">
+                <div class="solgani">
+                   <h2> სლოგანის ადგილი</h2>
+                   <p>
+Lorem Ipsum is simply dummy text of 
+industry. Lorem 1er tookd book.
+</p>
+                </div>
+                <div class="services_block_short" >
+                    <div class="services_block_title text-center"><span>ჩვენი სერვისები</span></div>
+                    <div class="row">
+                    <div class="services_block col-md-4">
+                       <a href="#">
+                        <img class="float-left" src="http://www.apicius.es/wp-content/uploads/2012/07/IMG-20120714-009211.jpg">  
+                         
+                          <p class="float-right">
+
+                              Lorem Ipsum is simply dummy text of 
+industry. Lorem 1er tookd book.
+Lorem Ipsum is simply dummy text of 
+industry. Lorem 1er tookd book.
+                          </p>
+                           
+                       </a>
+                    </div>
+                    <div class="services_block col-md-4">
+                        <a href="#">
+                        <img class="float-left" src="http://www.apicius.es/wp-content/uploads/2012/07/IMG-20120714-009211.jpg">  
+                         
+                          <p class="float-right">
+
+                              Lorem Ipsum is simply dummy text of 
+industry. Lorem 1er tookd book.
+Lorem Ipsum is simply dummy text of 
+industry. Lorem 1er tookd book.
+                          </p>
+                           
+                       </a>
+                    </div>
+                    <div class="services_block col-md-4">
+                       <a href="#">
+                        <img class="float-left" src="http://www.apicius.es/wp-content/uploads/2012/07/IMG-20120714-009211.jpg">  
+                         
+                          <p class="float-right">
+
+                              Lorem Ipsum is simply dummy text of 
+industry. Lorem 1er tookd book.
+Lorem Ipsum is simply dummy text of 
+industry. Lorem 1er tookd book.
+                          </p>
+                           
+                       </a>
+                    </div>
+
+                    <div class="services_block col-md-4">
+                       <a href="#">
+                        <img class="float-left" src="http://www.apicius.es/wp-content/uploads/2012/07/IMG-20120714-009211.jpg">  
+                         
+                          <p class="float-right">
+
+                              Lorem Ipsum is simply dummy text of 
+industry. Lorem 1er tookd book.
+Lorem Ipsum is simply dummy text of 
+industry. Lorem 1er tookd book.
+                          </p>
+                           
+                       </a>
+                    </div>
+
+                    <div class="services_block col-md-4">
+                       <a href="#">
+                        <img class="float-left" src="http://www.apicius.es/wp-content/uploads/2012/07/IMG-20120714-009211.jpg">  
+                         
+                          <p class="float-right">
+
+                              Lorem Ipsum is simply dummy text of 
+industry. Lorem 1er tookd book.
+Lorem Ipsum is simply dummy text of 
+industry. Lorem 1er tookd book.
+                          </p>
+                           
+                       </a>
+                    </div>
+
+                    <div class="services_block col-md-4">
+                       <a href="#" class="">
+                        <img class="float-left" src="http://www.apicius.es/wp-content/uploads/2012/07/IMG-20120714-009211.jpg">  
+                         
+                          <p class="float-right">
+
+                              Lorem Ipsum is simply dummy text of 
+industry. Lorem 1er tookd book.
+Lorem Ipsum is simply dummy text of 
+industry. Lorem 1er tookd book.
+                          </p>
+                           
+                       </a>
+                    </div>
+                </div>
+                </div>
+            
             </div>
         </div>
 
+  <script type="text/javascript">
+      $(window).scroll(function(){
+         // console.log($(window).scrollTop(), $(window).height(), $('.menu_block').height())
+    // if($(this).scrollTop()>=aTop){
+    //     alert('header just passed.');
+        
+    // }
 
+    if($(window).height() < $('.menu_block').height()-170 ){
+        console.log('test')
+            if($(window).scrollTop() > Math.abs(($(window).height()- $('.menu_block').height()))){
+       $('.menu_block').css({
+        'position': 'relative',
+        top:$(window).scrollTop()-Math.abs(($(window).height()- $('.menu_block').height()))+'px'
+    })
+    };
+    }
+   else{
+   if($(window).scrollTop() >170 ){
+
+       $('.menu_block').css({
+        'position': 'relative',
+        top:$(window).scrollTop()-170+'px'
+   });
+  }
+
+}
+
+})
+  </script>
 
 
 
