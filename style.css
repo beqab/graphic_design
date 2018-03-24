@@ -174,7 +174,8 @@ a[aria-expanded="true"]::before {
 ----------------------------------------------------- */
 #content {
   min-height: 100vh;
-  transition: all 0.3s; }
+  transition: all 0.3s;
+    max-width: 1000px; }
 
 #sidebarCollapse {
   width: 40px;
@@ -206,6 +207,7 @@ a[aria-expanded="true"]::before {
   margin: 5px auto; }
 
 #content .search {
+        transform: translateY(12px);
   max-width: 800px;
   padding-bottom: 10px;
   margin: auto;
