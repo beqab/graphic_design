@@ -67,6 +67,9 @@ input:focus, button:focus {
           border-right-style: solid;
           -moz-transform: scale(0.9999);
           display: none; }
+          #sidebar .menu_block nav ul li ul{
+            z-index: 5;
+          }
         #sidebar .menu_block nav ul:nth-child(2) li ul {
           position: absolute;
           right: -200px;
@@ -140,7 +143,6 @@ input:focus, button:focus {
 #sidebar {
   min-width: 350px;
   max-width: 350px;
-  background: #000;
   color: #fff;
   transition: all 0.6s cubic-bezier(0.945, 0.02, 0.27, 0.665);
   transform-origin: bottom left; }
@@ -231,18 +233,21 @@ a[aria-expanded="true"]::before {
 #content .solgani {
   margin-top: 28px;
   padding-left: 15px;
+  color: #fff;
   font-family: 'Conv_bpg_nateli_mtavruli'; }
   #content .solgani p {
     font-size: 20px;
     font-family: 'Conv_bpg_nateli_mtavruli'; }
 #content .services_block_title {
   position: relative;
-  margin-bottom: 20px; }
+  margin-top: 80px;
+  margin-bottom: 30px; }
   #content .services_block_title span {
     background-color: #f4f7f8;
     padding: 4px 20px;
     position: relative;
-    z-index: 2; }
+    z-index: 2;
+    border-radius: 7px; }
   #content .services_block_title:before {
     width: 90%;
     position: absolute;
@@ -252,31 +257,169 @@ a[aria-expanded="true"]::before {
     transform: translate(-50%, -50%);
     left: 50%;
     content: ''; }
-#content .services_block_short {
-  padding-bottom: 30px;
-  padding-top: 30px;
-  background: #f4f7f8; }
-  #content .services_block_short .services_block {
-    margin-bottom: 18px;
-    border-bottom: 1px solid #ccc; }
-    #content .services_block_short .services_block a {
-      color: #212112; }
-    #content .services_block_short .services_block:nth-child(3) p {
-      border-right: 0px !important; }
-    #content .services_block_short .services_block:nth-child(6) p {
-      border-right: 0px !important; }
-    #content .services_block_short .services_block img {
-      width: 15%;
-      margin-top: 6px; }
-    #content .services_block_short .services_block p {
-      width: 80%;
-      border-right: 1px solid #ccc;
-      padding-right: 15px;
-      text-align: justify;
-      font-family: 'Conv_bpg_nateli_mtavruli'; }
+#content .services_block_short .services_block .circule {
+  width: 270px;
+  height: 270px;
+  border: 2px solid #000;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 400px;
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 30px;
+
+  margin: auto; }
+   .blog_short .content{
+    transition: 0.4s;
+   }
+  .blog_short .content a{
+   transition: 0.3s;
+  }
+  .blog_short .content:hover a{
+  color: #223e48;
+  }
+  .blog_short .content:hover{
+    padding-left: 25px;
+    color: #ccc;
+  }
+
+  .services_block {
+    margin-bottom: 30px;
+  }
+  #content .services_block_short .services_block .circule img {
+    transition: 0.2s; }
+  #content .services_block_short .services_block .circule:hover img {
+    transform: scale(1.03); }
+  #content .services_block_short .services_block .circule:hover h3 {
+    font-weight: bold; }
+  #content .services_block_short .services_block .circule h3 {
+    padding-top: 27px;
+    padding-bottom: 20px; }
+#content .services_block_short .services_block a {
+  color: #212112; }
+  #content .services_block_short .services_block a:hover {
+    text-decoration: none; }
 
 .navbar-btn {
   display: none; }
+
+.about_us .content {
+  background: #fff;
+  padding: 50px;
+  color: #000;
+  padding-bottom: 130px; }
+  .about_us .content p {
+    text-indent: 20px; }
+.about_us .jumbo {
+  background: #cccccca8; }
+  .about_us .jumbo h2 {
+    margin: 0px;
+    text-align: center;
+    padding-top: 90px;
+    padding-bottom: 120px; }
+    .about_us .jumbo h2 span {
+      position: relative;
+      display: inline-block; }
+      .about_us .jumbo h2 span:before {
+        position: absolute;
+        content: '';
+        height: 1px;
+        width: 74%;
+        transform: translate(-50%, -50%);
+        background: #000;
+        left: 50%;
+        bottom: -6px; }
+
+.jumbo {
+  background: #cccccca8; }
+  .jumbo h2 {
+    margin: 0px;
+    text-align: center;
+    padding-top: 90px;
+    padding-bottom: 120px; }
+    .jumbo h2 span {
+      position: relative;
+      display: inline-block; }
+      .jumbo h2 span:before {
+        position: absolute;
+        content: '';
+        height: 1px;
+        width: 74%;
+        transform: translate(-50%, -50%);
+        background: #000;
+        left: 50%;
+        bottom: -6px; }
+
+.servis {
+  background: #fff; }
+  .servis .auther {
+    width: 270px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding-top: 20px; }
+    .servis .auther img {
+      width: 100%; }
+    .servis .auther a {
+      color: #000; }
+    .servis .auther h3 {
+      margin-top: 10px;
+      font-size: 18px;
+      margin-bottom: 14px;
+      margin-left: 0px; }
+    .servis .auther p {
+      margin-left: 0px; }
+
+body {
+  background: url(imgs/bg.png);
+  background-size: 100%;
+  background-position: center;
+  background-attachment: fixed; }
+.ContactHeadings {
+  font-size: 1.5em;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: grey;
+}
+.Icon {
+  width: 25px;
+  margin-right: 10px;
+}
+.li {
+  margin-top: 20px;
+}
+.blog_short {
+  margin-top: 50px;
+  background: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  .blog_short .services_block_title span {
+    background-color: #fff !important;
+    font-size: 30px; }
+  .blog_short .content {
+    border-left: 1px solid #000;
+    padding-left: 15px; }
+    .blog_short .content a {
+      color: #000; }
+      .blog_short .content a:hover {
+        text-decoration: none; }
+    .blog_short .content h4 {
+      font-weight: bold; }
+    .blog_short .content p {
+      margin-bottom: 0px; }
+  .blog_short .date {
+    padding-right: 15px;
+    color: #0c0c0c;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px; }
+
+footer {
+  padding: 30px;
+  background-color: #001f22;
+  color: #fff;
+  font-size: 20px; }
 
 .row {
   margin-left: 0px !important;
